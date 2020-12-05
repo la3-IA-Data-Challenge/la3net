@@ -27,7 +27,13 @@ export class SelectTargetsComponent implements OnInit, OnDestroy {
     this.route.params.pipe(takeUntil(this.unsubscribe$)).subscribe(
       (params) => {
         this.datasetId = +params['id'];
-        console.log(this.datasetId);
+        this.datasetsServices.get(this.datasetId).pipe(takeUntil(this.unsubscribe$)).subscribe(
+          (res) => {
+            this.dataset = res;
+            console.log(this.dataset);
+
+          }
+        )
       }
     )
   }

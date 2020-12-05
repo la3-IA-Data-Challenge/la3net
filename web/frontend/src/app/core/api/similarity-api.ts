@@ -15,7 +15,7 @@ export class SimilarityApi {
     }
 
     get(id: number): Observable<any> {
-        return this.api.get(`${this.apiController}/${id}`);
+        return this.api.get(`${this.apiController}/${id}/`);
     }
 
     add(item: any): Observable<any> {

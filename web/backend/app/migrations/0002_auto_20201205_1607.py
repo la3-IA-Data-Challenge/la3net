@@ -9,7 +9,6 @@ import os
 
 
 def create_dataset(apps, schema_editor):
-
     dataset = Dataset.objects.create()
     default_dataset_path = os.path.join(settings.MEDIA_ROOT, "default-dataset")
     files = [f for f in os.listdir(
@@ -20,7 +19,8 @@ def create_dataset(apps, schema_editor):
         file_db.file = os.path.join("default-dataset", f)
         file_db.save()
         dataset.files.add(file_db)
-        dataset.save()
+
+    dataset.save()
 
 
 class Migration(migrations.Migration):
