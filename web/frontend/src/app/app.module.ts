@@ -11,7 +11,6 @@ import localeFr from '@angular/common/locales/fr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -19,7 +18,6 @@ registerLocaleData(localeFr, 'fr');
   declarations: [
     AppComponent,
     NotFoundComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,

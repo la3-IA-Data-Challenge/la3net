@@ -1,33 +1,20 @@
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded mt-3">
-        <a class="navbar-brand" routerLink="/home" routerLinkActive="active">Secure Degree</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09"
-            aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="bg-light min-vh-100">
+    <div class="container">
 
-        <div class="collapse navbar-collapse" id="navbarsExample09">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/degree-request/create" routerLinkActive="active">
-                        Faire une demande
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/degree-request/list" routerLinkActive="active">
-                        Liste des demandes
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/degree-request/verify" routerLinkActive="active">
-                        Vérifier un diplôme
-                    </a>
-                </li>
-            </ul>
+        <div class="row">
+            <button type="button" class="btn btn-light btn-lg" (click)=cancel()>
+                <i class="pi pi-chevron-left"></i>
+            </button>
         </div>
-    </nav>
 
-    <div class="jumbotron mt-3">
+        <div class="row">
+            <div class="col-12 text-center text-blue mb-5">
+                <h1 class="font-weight-bold">
+                    Datachallenge
+                </h1>
+            </div>
+        </div>
+
         <router-outlet></router-outlet>
     </div>
 </div>

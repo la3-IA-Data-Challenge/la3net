@@ -15,3 +15,13 @@ class DatasetSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Dataset
         fields = ['id', 'files']
+
+
+class SimilaritySerializer(serializers.ModelSerializer):
+    dataset = DatasetSerializer()
+    target = FileSerializer(many=True)
+    results = FileSerializer(many=True)
+
+    class Meta:
+        model = models.Dataset
+        fields = ['id', 'dataset', 'target', 'result']
