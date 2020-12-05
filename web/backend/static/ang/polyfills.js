@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/eisti/secure-degree/frontend/src/polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! /home/kali/Documents/la3net/web/frontend/src/polyfills.ts */"hN/g");
 
 
 /***/ }),
