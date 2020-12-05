@@ -1,0 +1,3 @@
+FLASK_APP=la3app
+FLASK_ENV=development
+FLASK_RUN_PORT=5001
