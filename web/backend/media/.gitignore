@@ -1,0 +1,6 @@
+*
+!degree
+!upload
+!default-dataset/
+!default-dataset/*
+!.gitignore

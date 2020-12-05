@@ -1,0 +1,43 @@
+<h1>
+    Secure degree
+</h1>
+<p class="text-muted">
+    Application permettant de mettre en œuvre un procédé de diffusion électronique sécurisée d'attestation de
+    réussite/diplômes.
+    <br>
+    Il est notamment possible avec cette application de créer une demande de création d'attestation de réussite, de la
+    valider/rejeter ou bien de vérifier l'authenticité de cette dernière.
+</p>
+<hr>
+
+<div class="bg-light rounded p-4">
+    <h2>
+        Formulaire de demande d'attestation de réussite
+    </h2>
+    <p class="text-muted">
+        Pour faire une demande d'attestation de réussite via un formulaire. Cette demande sera ensuite affichée dans la
+        page affichant les liste des demandes.
+    </p>
+    <a class="btn btn-primary ml-auto" routerLink="/degree-request/create" role="button">Créer une demande</a>
+</div>
+
+<div class="bg-light rounded p-4 mt-3">
+    <h2>
+        Liste des demandes d'attestion de réussite
+    </h2>
+    <p class="text-muted">
+        Affiche la liste des demandes à traiter, ceux qui sont validées ou rejetées. Chaque action nécessitera un OTP
+        envoyé par mail.
+    </p>
+    <a class="btn btn-primary ml-auto" routerLink="/degree-request/list" role="button">Liste des demandes</a>
+</div>
+
+<div class="bg-light rounded p-4 mt-3">
+    <h2>
+        Vérirication d'une attestation
+    </h2>
+    <p class="text-muted">
+        Vérifie l'authenticité d'une attestation.
+    </p>
+    <a class="btn btn-primary ml-auto" routerLink="/degree-request/verify" role="button">Vérifier un diplôme</a>
+</div>
