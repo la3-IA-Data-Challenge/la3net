@@ -116,6 +116,12 @@ class Execute(APIView):
                 targets = sim.targets.all()
                 dataset_files = sim.dataset.files.all()
 
+                if sim.dataset.id == 1:
+                    feature_path = os.path.join(
+                        settings.MEDIA_ROOT, "features_mn.pkl")
+                else:
+                    feature_path = ""
+
                 for i in range(0, 10):
                     f = dataset_files[i]
                     path = os.path.join(settings.MEDIA_ROOT, str(f.file))

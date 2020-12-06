@@ -20,8 +20,8 @@ export class SelectTargetsComponent implements OnInit, OnDestroy {
 
   similarity: Similarity;
 
-  availableFiles: File[];
-  selectedFiles: File[];
+  availableFiles: File[] = [];
+  selectedFiles: File[] = [];
   draggedFile: File;
 
   pageFiles: File[];

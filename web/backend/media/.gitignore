@@ -4,3 +4,4 @@
 !default-dataset/
 !default-dataset/*
 !.gitignore
+!features_mn.pkl

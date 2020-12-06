@@ -531,10 +531,10 @@ function SelectMethodComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h2");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "h2", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " Choisir une m\u00E9thode ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "button", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "button", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function SelectMethodComponent_div_0_Template_button_click_5_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r3.execute($event); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -544,11 +544,11 @@ function SelectMethodComponent_div_0_Template(rf, ctx) { if (rf & 1) {
 } }
 function SelectMethodComponent_div_1_div_1_Template(rf, ctx) { if (rf & 1) {
     const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p-radioButton", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "p-radioButton", 8);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function SelectMethodComponent_div_1_div_1_Template_p_radioButton_ngModelChange_1_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r8); const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r7.selectedMethod = $event; });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "label", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "label", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -564,7 +564,7 @@ function SelectMethodComponent_div_1_div_1_Template(rf, ctx) { if (rf & 1) {
 } }
 function SelectMethodComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SelectMethodComponent_div_1_div_1_Template, 4, 5, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SelectMethodComponent_div_1_div_1_Template, 4, 5, "div", 6);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
@@ -573,13 +573,13 @@ function SelectMethodComponent_div_1_Template(rf, ctx) { if (rf & 1) {
 } }
 function SelectMethodComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Loading...");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h2", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h2", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Ex\u00E9cution du mod\u00E8le");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -619,7 +619,7 @@ class SelectMethodComponent {
     }
 }
 SelectMethodComponent.ɵfac = function SelectMethodComponent_Factory(t) { return new (t || SelectMethodComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_core_interface_similarity__WEBPACK_IMPORTED_MODULE_4__["SimilarityData"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"])); };
-SelectMethodComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SelectMethodComponent, selectors: [["app-select-method"]], decls: 3, vars: 3, consts: [["class", "row", 4, "ngIf"], [1, "row"], [1, "col-12"], [1, "d-flex", "flex-row", "justify-content-between", "align-items-center"], ["pButton", "", "type", "button", "icon", "pi pi-chevron-right", "iconPos", "right", "label", "Ex\u00E9cuter le mod\u00E8le", 1, "text-left", 3, "click"], ["class", "p-field-radiobutton col-12 d-flex align-items-center mb-3", 4, "ngFor", "ngForOf"], [1, "p-field-radiobutton", "col-12", "d-flex", "align-items-center", "mb-3"], ["name", "method", 3, "value", "ngModel", "inputId", "ngModelChange"], [1, "ml-2", "mb-0", "h4", 3, "for"], [1, "col-12", "d-flex", "flex-column", "align-items-center", "justify-content-center"], ["role", "status", 1, "spinner-border", "my-5", 2, "width", "5rem", "height", "5rem"], [1, "sr-only"], [1, "font-weight-bold", "text-center"]], template: function SelectMethodComponent_Template(rf, ctx) { if (rf & 1) {
+SelectMethodComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SelectMethodComponent, selectors: [["app-select-method"]], decls: 3, vars: 3, consts: [["class", "row", 4, "ngIf"], [1, "row"], [1, "col-12"], [1, "d-flex", "flex-row", "justify-content-between", "align-items-center"], [1, "mb-0", "align-text-bottom"], ["pButton", "", "type", "button", "icon", "pi pi-chevron-right", "iconPos", "right", "label", "Ex\u00E9cuter le mod\u00E8le", 1, "text-left", 3, "click"], ["class", "p-field-radiobutton col-12 d-flex align-items-center mb-3", 4, "ngFor", "ngForOf"], [1, "p-field-radiobutton", "col-12", "d-flex", "align-items-center", "mb-3"], ["name", "method", 3, "value", "ngModel", "inputId", "ngModelChange"], [1, "ml-2", "mb-0", "h4", 3, "for"], [1, "col-12", "d-flex", "flex-column", "align-items-center", "justify-content-center"], ["role", "status", 1, "spinner-border", "my-5", 2, "width", "5rem", "height", "5rem"], [1, "sr-only"], [1, "font-weight-bold", "text-center"]], template: function SelectMethodComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, SelectMethodComponent_div_0_Template, 7, 0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, SelectMethodComponent_div_1_Template, 2, 1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, SelectMethodComponent_div_2_Template, 7, 0, "div", 0);
@@ -8665,6 +8665,8 @@ class SelectTargetsComponent {
         this.similaritiesServices = similaritiesServices;
         this.router = router;
         this.unsubscribe$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
+        this.availableFiles = [];
+        this.selectedFiles = [];
         this.page = 0;
         this.rows = 10;
         this.targetsEmptyError = false;
