@@ -16,7 +16,7 @@ export class SelectMethodComponent implements OnInit, OnDestroy {
   similarityId: number;
   similarity: Similarity;
 
-  methods: string[] = ["CNN", "Hashing method", "OBR Descriptor"];
+  methods: string[] = ["CNN", "Hashing method", "ORB Descriptor"];
   selectedMethod: string = this.methods[0];
 
   isLoading: boolean = false;

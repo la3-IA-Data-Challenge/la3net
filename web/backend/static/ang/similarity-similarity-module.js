@@ -591,7 +591,7 @@ class SelectMethodComponent {
         this.similaritiesServives = similaritiesServives;
         this.router = router;
         this.unsubscribe$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-        this.methods = ["CNN", "Hashing method", "OBR Descriptor"];
+        this.methods = ["CNN", "Hashing method", "ORB Descriptor"];
         this.selectedMethod = this.methods[0];
         this.isLoading = false;
     }
