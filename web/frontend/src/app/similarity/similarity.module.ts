@@ -15,9 +15,17 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { ResultComponent } from './result/result.component';
 import { CarouselModule } from 'primeng/carousel';
 
+import { SplitPipe } from './../pipes/split.pipe';
+
 
 @NgModule({
-  declarations: [SelectOptionComponent, SelectTargetsComponent, SelectMethodComponent, ResultComponent],
+  declarations: [
+    SelectOptionComponent,
+    SelectTargetsComponent,
+    SelectMethodComponent,
+    ResultComponent,
+    SplitPipe,
+  ],
   imports: [
     CommonModule,
     SimilarityRoutingModule,
@@ -30,7 +38,7 @@ import { CarouselModule } from 'primeng/carousel';
     ScrollPanelModule,
     PaginatorModule,
     RadioButtonModule,
-    CarouselModule
+    CarouselModule,
   ]
 })
 export class SimilarityModule { }

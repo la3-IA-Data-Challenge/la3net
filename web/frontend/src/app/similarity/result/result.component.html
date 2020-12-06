@@ -9,6 +9,9 @@
             <ng-template let-target pTemplate="item">
                 <div class="card mx-2">
                     <img [src]="target.file" class="img-thumbnail" />
+                    <div class="card-body">
+                        <p class="card-text"> {{target.id}} - {{target.file | split : "/" : -1}}</p>
+                    </div>
                 </div>
             </ng-template>
         </p-carousel>
@@ -20,7 +23,10 @@
         <p-carousel [value]="results" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
             <ng-template let-result pTemplate="item">
                 <div class="card mx-2">
-                    <img [src]="result.file" class="img-thumbnail" />
+                    <img [src]="result.file" class="img-thumbnail card-img-top" />
+                    <div class="card-body">
+                        <p class="card-text"> {{result.id}} - {{result.file | split : "/" : -1}}</p>
+                    </div>
                 </div>
             </ng-template>
         </p-carousel>
