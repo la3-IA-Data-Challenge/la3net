@@ -591,7 +591,6 @@ class SelectMethodComponent {
         this.similaritiesServives = similaritiesServives;
         this.router = router;
         this.unsubscribe$ = new rxjs__WEBPACK_IMPORTED_MODULE_1__["Subject"]();
-        // TODO : Rename methods - frontend
         this.methods = ["CNN", "Hashing method", "OBR Descriptor"];
         this.selectedMethod = this.methods[0];
         this.isLoading = false;
