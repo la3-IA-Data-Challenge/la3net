@@ -6,7 +6,6 @@ from django.conf import settings
 from rest_framework import mixins, generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.renderers import JSONRenderer
 
 import os
 
@@ -91,7 +90,7 @@ class SimilarityDetail(mixins.RetrieveModelMixin,
                        mixins.DestroyModelMixin,
                        generics.GenericAPIView):
     queryset = Similarity.objects.all()
-    serializer_class = SimilaritySerializer
+    serializer_class = SimilarityAllSerializer
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, *args, **kwargs)
@@ -119,10 +118,11 @@ class Execute(APIView):
 
                 for i in range(0, 10):
                     f = dataset_files[i]
-                    path = os.path.join(settings.MEDIA_ROOT) + str(f.file)
+                    path = os.path.join(settings.MEDIA_ROOT, str(f.file))
                     print(path)
 
                 # TODO : Exécuter le modèle
+                # TODO : rename methods - backend
                 if (method == "method1"):
                     pass
                 elif (method == "method2"):
@@ -138,7 +138,7 @@ class Execute(APIView):
 
                 sim_ser = SimilarityAllSerializer(sim)
 
-                return Response(JSONRenderer().render(sim_ser.data), status=status.HTTP_200_OK)
+                return Response(sim_ser.data, status=status.HTTP_200_OK)
             else:
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

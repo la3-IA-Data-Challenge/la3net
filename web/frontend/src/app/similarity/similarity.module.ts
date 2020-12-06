@@ -12,10 +12,12 @@ import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { PaginatorModule } from 'primeng/paginator';
 import { SelectMethodComponent } from './select-method/select-method.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { ResultComponent } from './result/result.component';
+import { CarouselModule } from 'primeng/carousel';
 
 
 @NgModule({
-  declarations: [SelectOptionComponent, SelectTargetsComponent, SelectMethodComponent],
+  declarations: [SelectOptionComponent, SelectTargetsComponent, SelectMethodComponent, ResultComponent],
   imports: [
     CommonModule,
     SimilarityRoutingModule,
@@ -28,6 +30,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     ScrollPanelModule,
     PaginatorModule,
     RadioButtonModule,
+    CarouselModule
   ]
 })
 export class SimilarityModule { }

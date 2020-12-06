@@ -26,6 +26,7 @@
 
     <div class="col-12 col-md-6 drop-column order-1 order-md-2 mb-5 mb-md-0">
         <h2 class="text-center">Cibles</h2>
+        <p *ngIf="targetsEmptyError" class="text-danger label">Veuillez sélectionner au minimum une cible</p>
         <div *ngFor="let file of selectedFiles">
             <div class="file-item">
                 <div class="image-container">

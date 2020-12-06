@@ -28,6 +28,8 @@ export class SelectTargetsComponent implements OnInit, OnDestroy {
   page: number = 0;
   rows: number = 10;
 
+  targetsEmptyError: boolean = false;
+
   constructor(
     private route: ActivatedRoute,
     private datasetsServices: DatasetData,
@@ -42,6 +44,8 @@ export class SelectTargetsComponent implements OnInit, OnDestroy {
         this.datasetsServices.get(this.datasetId).pipe(takeUntil(this.unsubscribe$)).subscribe(
           (res) => {
             this.dataset = res;
+            console.log(res);
+
             this.availableFiles = this.dataset.files;
             this.pageFiles = this.availableFiles.slice(this.page * this.rows, this.page * this.rows + this.rows);
           }
@@ -64,6 +68,7 @@ export class SelectTargetsComponent implements OnInit, OnDestroy {
     let draggedFileIndex = this.selectedFiles.findIndex(x => x.id === file.id);
     this.availableFiles = [...this.availableFiles, file];
     this.selectedFiles = this.selectedFiles.filter((val, i) => i != draggedFileIndex);
+    this.availableFiles.sort((a, b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0));
 
     this.pageFiles = this.availableFiles.slice(this.page * this.rows, this.page * this.rows + this.rows);
   }
@@ -93,6 +98,10 @@ export class SelectTargetsComponent implements OnInit, OnDestroy {
       targets.push(element.id);
     });
 
+    if (targets.length === 0) {
+      this.targetsEmptyError = true;
+      return
+    }
     let similarity = {
       id: 0,
       dataset: this.dataset.id,
