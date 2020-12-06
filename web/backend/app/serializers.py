@@ -37,7 +37,7 @@ class SimilarityAllSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Similarity
-        fields = 'id, dataset, targets, results'
+        fields = ['id', 'dataset', 'targets', 'results']
 
 
 class ExecuteSerializer(serializers.Serializer):

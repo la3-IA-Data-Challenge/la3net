@@ -1,10 +1,14 @@
 from .models import File, Dataset, Similarity
 from .serializers import DatasetSerializer, FileSerializer, SimilaritySerializer, SimilarityAllSerializer, ExecuteSerializer
 
+from django.conf import settings
+
 from rest_framework import mixins, generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.renderers import JSONRenderer
+
+import os
 
 # Create your views here.
 
@@ -107,9 +111,34 @@ class Execute(APIView):
             if serializer.is_valid():
                 sim = Similarity.objects.get(
                     id=serializer.validated_data['similarityId'])
+
                 method = serializer.validated_data['method']
 
-                return Response({}, status=status.HTTP_200_OK)
+                targets = sim.targets.all()
+                dataset_files = sim.dataset.files.all()
+
+                for i in range(0, 10):
+                    f = dataset_files[i]
+                    path = os.path.join(settings.MEDIA_ROOT) + str(f.file)
+                    print(path)
+
+                # TODO : Exécuter le modèle
+                if (method == "method1"):
+                    pass
+                elif (method == "method2"):
+                    pass
+                else:
+                    return Response({"Error 400": "Bad request"}, status=status.HTTP_400_BAD_REQUEST)
+
+                # List of File
+                sim_files = []
+                for item in sim_files:
+                    sim.results.add(item)
+                sim.save()
+
+                sim_ser = SimilarityAllSerializer(sim)
+
+                return Response(JSONRenderer().render(sim_ser.data), status=status.HTTP_200_OK)
             else:
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
