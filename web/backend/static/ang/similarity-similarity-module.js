@@ -8500,7 +8500,7 @@ function ResultComponent_ng_container_14_Template(rf, ctx) { if (rf & 1) {
 } }
 function ResultComponent_ng_template_15_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 10);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "p", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
@@ -8564,7 +8564,7 @@ class ResultComponent {
     }
 }
 ResultComponent.ɵfac = function ResultComponent_Factory(t) { return new (t || ResultComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_core_interface_similarity__WEBPACK_IMPORTED_MODULE_4__["SimilarityData"])); };
-ResultComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ResultComponent, selectors: [["app-result"]], decls: 17, vars: 6, consts: [[1, "row"], [1, "col-12"], [1, "text-center", "mb-5"], [1, "text-muted"], [3, "value", "numVisible", "numScroll", "responsiveOptions"], ["pTemplate", "item"], [4, "ngIf", "ngIfElse"], ["elseTemplate", ""], [1, "card", "mx-2"], [1, "img-thumbnail", 3, "src"], [1, "card-body"], [1, "card-text"], [1, "img-thumbnail", "card-img-top", 3, "src"]], template: function ResultComponent_Template(rf, ctx) { if (rf & 1) {
+ResultComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ResultComponent, selectors: [["app-result"]], decls: 17, vars: 6, consts: [[1, "row"], [1, "col-12"], [1, "text-center", "mb-5"], [1, "text-muted"], [3, "value", "numVisible", "numScroll", "responsiveOptions"], ["pTemplate", "item"], [4, "ngIf", "ngIfElse"], ["elseTemplate", ""], [1, "card", "mx-2"], [1, "img-thumbnail", "card-img-top", 3, "src"], [1, "card-body"], [1, "card-text"]], template: function ResultComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h2", 2);

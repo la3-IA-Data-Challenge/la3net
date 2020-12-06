@@ -8,7 +8,7 @@
         <p-carousel [value]="targets" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
             <ng-template let-target pTemplate="item">
                 <div class="card mx-2">
-                    <img [src]="target.file" class="img-thumbnail" />
+                    <img [src]="target.file" class="img-thumbnail card-img-top" />
                     <div class="card-body">
                         <p class="card-text"> {{target.id}} - {{target.file | split : "/" : -1}}</p>
                     </div>
