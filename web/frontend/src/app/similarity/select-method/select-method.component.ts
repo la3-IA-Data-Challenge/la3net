@@ -16,8 +16,7 @@ export class SelectMethodComponent implements OnInit, OnDestroy {
   similarityId: number;
   similarity: Similarity;
 
-  // TODO : Rename methods - frontend
-  methods: string[] = ["method1", "method2", "method3"];
+  methods: string[] = ["CNN", "Hashing method", "OBR Descriptor"];
   selectedMethod: string = this.methods[0];
 
   isLoading: boolean = false;

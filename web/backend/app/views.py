@@ -7,6 +7,8 @@ from rest_framework import mixins, generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+from .core.pipeline import method1, method2, method3
+
 import os
 
 # Create your views here.
@@ -122,26 +124,36 @@ class Execute(APIView):
                 else:
                     feature_path = ""
 
-                for i in range(0, 10):
-                    f = dataset_files[i]
-                    path = os.path.join(settings.MEDIA_ROOT, str(f.file))
-                    print(path)
+                targets_str = []
+                for target in targets:
+                    targets_str.append(
+                        os.path.join(settings.MEDIA_ROOT, str(target.file))
+                    )
 
-                # TODO : Exécuter le modèle
-                # TODO : rename methods - backend
-                if (method == "method1"):
-                    pass
-                elif (method == "method2"):
-                    pass
-                elif (method == "method3"):
-                    pass
+                dataset_files_str = []
+                for dataset_file in dataset_files:
+                    dataset_files_str.append(
+                        os.path.join(settings.MEDIA_ROOT,
+                                     str(dataset_file.file))
+                    )
+                dataset_files_str.sort()
+
+                if (method == "CNN"):
+                    results_str = method1(
+                        targets_str, dataset_files_str, feature_path)
+                elif (method == "Hashing method"):
+                    results_str = method2(
+                        targets_str, dataset_files_str, feature_path)
+                elif (method == "OBR Descriptor"):
+                    results_str = method3(
+                        targets_str, dataset_files_str, feature_path)
                 else:
                     return Response({"Error 400": "Bad request"}, status=status.HTTP_400_BAD_REQUEST)
 
-                # List of File
-                sim_files = []
-                for item in sim_files:
-                    sim.results.add(item)
+                for item in results_str:
+                    filename = item.split("/")[-1]
+                    f = File.objects.get(file__contains=filename)
+                    sim.results.add(f)
                 sim.save()
 
                 sim_ser = SimilarityAllSerializer(sim)
@@ -150,5 +162,7 @@ class Execute(APIView):
             else:
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        except Exception:
+        except Exception as e:
+            print("ERROR")
+            print(e)
             return Response({"Error 500": "Internal serveur error"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
