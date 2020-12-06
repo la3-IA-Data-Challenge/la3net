@@ -14,6 +14,7 @@ urlpatterns = [
     path('datasets/<int:pk>/', views.DatasetDetail.as_view()),
     path('similarities/', views.SimilarityList.as_view()),
     path('similarities/<int:pk>/', views.SimilarityDetail.as_view()),
+    path('similarities/execute/', views.Execute.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

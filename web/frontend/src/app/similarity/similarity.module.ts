@@ -11,8 +11,7 @@ import { DragDropModule } from 'primeng/dragdrop';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { PaginatorModule } from 'primeng/paginator';
 import { SelectMethodComponent } from './select-method/select-method.component';
-
-
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 
 @NgModule({
@@ -28,6 +27,7 @@ import { SelectMethodComponent } from './select-method/select-method.component';
     DragDropModule,
     ScrollPanelModule,
     PaginatorModule,
+    RadioButtonModule,
   ]
 })
 export class SimilarityModule { }

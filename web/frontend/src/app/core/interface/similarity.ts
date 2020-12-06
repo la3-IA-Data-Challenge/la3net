@@ -13,4 +13,5 @@ export abstract class SimilarityData {
     abstract list(): Observable<Similarity[]>;
     abstract get(id: number): Observable<Similarity>;
     abstract add(similarity: any): Observable<Similarity>;
+    abstract execute(item: any): Observable<Similarity>;
 }

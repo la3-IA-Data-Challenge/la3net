@@ -25,7 +25,21 @@ class DatasetSerializer(serializers.ModelSerializer):
 
 
 class SimilaritySerializer(serializers.ModelSerializer):
-
     class Meta:
         model = models.Similarity
         fields = '__all__'
+
+
+class SimilarityAllSerializer(serializers.ModelSerializer):
+    dataset = DatasetSerializer()
+    results = FileSerializer(many=True)
+    targets = FileSerializer(many=True)
+
+    class Meta:
+        model = models.Similarity
+        fields = 'id, dataset, targets, results'
+
+
+class ExecuteSerializer(serializers.Serializer):
+    similarityId = serializers.IntegerField()
+    method = serializers.CharField()

@@ -1,1 +1,18 @@
-<p>select-method works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex flex-row justify-content-between align-items-center">
+            <h2>
+                Choisir une méthode
+            </h2>
+            <button pButton type="button" class="text-left" icon="pi pi-chevron-right" iconPos="right"
+                label="Exécuter le modèle" (click)="execute($event)"></button>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let item of methods" class="col-12">
+        <p-radioButton name="groupname" [value]="item" [label]="item" [(ngModel)]="selectedMethod"></p-radioButton>
+    </div>
+</div>

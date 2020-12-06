@@ -1,8 +1,10 @@
 from .models import File, Dataset, Similarity
-from .serializers import DatasetSerializer, FileSerializer, SimilaritySerializer
+from .serializers import DatasetSerializer, FileSerializer, SimilaritySerializer, SimilarityAllSerializer, ExecuteSerializer
 
-from rest_framework import mixins
-from rest_framework import generics
+from rest_framework import mixins, generics, status
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.renderers import JSONRenderer
 
 # Create your views here.
 
@@ -95,3 +97,21 @@ class SimilarityDetail(mixins.RetrieveModelMixin,
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+
+
+class Execute(APIView):
+    def post(self, request, *args, **kwargs):
+        try:
+            serializer = ExecuteSerializer(data=request.data)
+
+            if serializer.is_valid():
+                sim = Similarity.objects.get(
+                    id=serializer.validated_data['similarityId'])
+                method = serializer.validated_data['method']
+
+                return Response({}, status=status.HTTP_200_OK)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        except Exception:
+            return Response({"Error 500": "Internal serveur error"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

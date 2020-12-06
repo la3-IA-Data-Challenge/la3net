@@ -21,5 +21,9 @@ export class SimilarityApi {
     add(item: any): Observable<any> {
         return this.api.post(`${this.apiController}/`, item);
     }
+
+    execute(item: any): Observable<any> {
+        return this.api.post(`${this.apiController}/execute/`, item);
+    }
 }
 

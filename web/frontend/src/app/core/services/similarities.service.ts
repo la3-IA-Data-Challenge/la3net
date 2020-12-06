@@ -23,4 +23,9 @@ export class SimilaritiessService extends SimilarityData {
   add(similarity: any): Observable<Similarity> {
     return this.api.add(similarity);
   }
+
+  execute(item: any): Observable<Similarity> {
+    return this.api.execute(item);
+  }
+
 }
