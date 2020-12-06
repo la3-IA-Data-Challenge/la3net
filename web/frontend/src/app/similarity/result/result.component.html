@@ -20,16 +20,21 @@
     <div class="col-12">
         <h5 class="text-muted">Résultat</h5>
         <hr>
-        <p-carousel [value]="results" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-            <ng-template let-result pTemplate="item">
-                <div class="card mx-2">
-                    <img [src]="result.file" class="img-thumbnail card-img-top" />
-                    <div class="card-body">
-                        <p class="card-text"> {{result.id}} - {{result.file | split : "/" : -1}}</p>
+        <ng-container *ngIf="results.length === 0 ; else elseTemplate">
+            Aucun duplicat trouvé
+        </ng-container>
+        <ng-template #elseTemplate>
+            <p-carousel [value]="results" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+                <ng-template let-result pTemplate="item">
+                    <div class="card mx-2">
+                        <img [src]="result.file" class="img-thumbnail card-img-top" />
+                        <div class="card-body">
+                            <p class="card-text"> {{result.id}} - {{result.file | split : "/" : -1}}</p>
+                        </div>
                     </div>
-                </div>
-            </ng-template>
-        </p-carousel>
+                </ng-template>
+            </p-carousel>
+        </ng-template>
 
     </div>
 </div>

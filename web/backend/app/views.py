@@ -151,9 +151,10 @@ class Execute(APIView):
                     return Response({"Error 400": "Bad request"}, status=status.HTTP_400_BAD_REQUEST)
 
                 for item in results_str:
-                    filename = item.split("/")[-1]
-                    f = File.objects.get(file__contains=filename)
-                    sim.results.add(f)
+                    if item not in targets_str:
+                        filename = item.split("/")[-1]
+                        f = File.objects.get(file__contains=filename)
+                        sim.results.add(f)
                 sim.save()
 
                 sim_ser = SimilarityAllSerializer(sim)

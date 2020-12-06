@@ -17,7 +17,7 @@ export class ResultComponent implements OnInit, OnDestroy {
   similarityId: number;
   similarity: Similarity;
   targets: File[];
-  results: File[];
+  results: File[] = [];
 
   responsiveOptions: any[];
 
@@ -35,8 +35,6 @@ export class ResultComponent implements OnInit, OnDestroy {
         this.similaritiesServives.get(this.similarityId).pipe(takeUntil(this.unsubscribe$)).subscribe(
           (res) => {
             this.similarity = res;
-
-
             this.targets = this.similarity.targets;
             this.results = this.similarity.results;
             console.log(res);
