@@ -144,7 +144,7 @@ class Execute(APIView):
                 elif (method == "Hashing method"):
                     results_str = method2(
                         targets_str, dataset_files_str, feature_path)
-                elif (method == "OBR Descriptor"):
+                elif (method == "ORB Descriptor"):
                     results_str = method3(
                         targets_str, dataset_files_str, feature_path)
                 else:
