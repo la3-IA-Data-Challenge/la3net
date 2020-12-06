@@ -69,7 +69,7 @@ class DatasetApi {
         return this.api.get(`${this.apiController}/${id}/`);
     }
     add(item) {
-        return this.api.post(this.apiController, item);
+        return this.api.post(`${this.apiController}/`, item);
     }
 }
 DatasetApi.ɵfac = function DatasetApi_Factory(t) { return new (t || DatasetApi)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"])); };
@@ -127,7 +127,10 @@ class SimilarityApi {
         return this.api.get(`${this.apiController}/${id}/`);
     }
     add(item) {
-        return this.api.post(this.apiController, item);
+        return this.api.post(`${this.apiController}/`, item);
+    }
+    execute(item) {
+        return this.api.post(`${this.apiController}/execute/`, item);
     }
 }
 SimilarityApi.ɵfac = function SimilarityApi_Factory(t) { return new (t || SimilarityApi)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"])); };
@@ -244,7 +247,7 @@ class FileApi {
         return this.api.get(`${this.apiController}/${id}/`);
     }
     add(item) {
-        return this.api.post(this.apiController, item);
+        return this.api.post(`${this.apiController}/`, item);
     }
 }
 FileApi.ɵfac = function FileApi_Factory(t) { return new (t || FileApi)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_http_service__WEBPACK_IMPORTED_MODULE_1__["HttpService"])); };
@@ -473,6 +476,9 @@ class SimilaritiessService extends _interface_similarity__WEBPACK_IMPORTED_MODUL
     }
     add(similarity) {
         return this.api.add(similarity);
+    }
+    execute(item) {
+        return this.api.execute(item);
     }
 }
 SimilaritiessService.ɵfac = function SimilaritiessService_Factory(t) { return new (t || SimilaritiessService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_api_similarity_api__WEBPACK_IMPORTED_MODULE_2__["SimilarityApi"])); };
