@@ -8,6 +8,13 @@ class FileSerializer(serializers.ModelSerializer):
         model = models.File
         fields = ['id', 'file']
 
+        extra_kwargs = {
+            "file": {
+                "read_only": False,
+                "required": False,
+            },
+        }
+
 
 class DatasetSerializer(serializers.ModelSerializer):
     files = FileSerializer(many=True)
@@ -18,10 +25,7 @@ class DatasetSerializer(serializers.ModelSerializer):
 
 
 class SimilaritySerializer(serializers.ModelSerializer):
-    dataset = DatasetSerializer()
-    target = FileSerializer(many=True)
-    results = FileSerializer(many=True)
 
     class Meta:
-        model = models.Dataset
-        fields = ['id', 'dataset', 'target', 'result']
+        model = models.Similarity
+        fields = '__all__'

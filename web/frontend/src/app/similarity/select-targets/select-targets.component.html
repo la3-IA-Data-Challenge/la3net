@@ -1,1 +1,46 @@
-<p>select-targets works!</p>
+<div class="row">
+    <div class="col-12">
+        <button pButton type="button" class="text-left float-right mb-4" icon="pi pi-chevron-right" iconPos="right"
+            label="Suivant" (click)="goToNextStep($event)"></button>
+    </div>
+
+    <div class="col-12 col-md-6 order-2 order-md-1">
+        <h2 class="text-center">Dataset</h2>
+        <p-paginator [rows]="10" [totalRecords]="availableFiles.length" [rowsPerPageOptions]="[10,20,30]"
+            (onPageChange)="paginate($event)"></p-paginator>
+        <div *ngFor="let file of pageFiles">
+            <div class="file-item d-flex">
+                <div class="image-container">
+                    <img [src]="file.file" class="product-image" />
+                </div>
+                <div class="flex-grow-1 d-flex justify-content-between align-items-center">
+                    <span>
+                        {{file.id}}
+                    </span>
+                    <button pButton pRipple type="button" icon="pi pi-check"
+                        class="p-button-rounded p-button-success p-button-text" (click)="select($event, file)"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 drop-column order-1 order-md-2 mb-5 mb-md-0">
+        <h2 class="text-center">Cibles</h2>
+        <div *ngFor="let file of selectedFiles">
+            <div class="file-item">
+                <div class="image-container">
+                    <img [src]="file.file" class="product-image" />
+                </div>
+                <div class="flex-grow-1 d-flex justify-content-between align-items-center">
+                    <span>
+                        {{file.id}}
+                    </span>
+                    <button pButton pRipple type="button" icon="pi pi-times"
+                        class="p-button-rounded p-button-danger p-button-text"
+                        (click)="deselect($event, file)"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

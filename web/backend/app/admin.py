@@ -13,10 +13,18 @@ class FileAdmin(admin.ModelAdmin):
 class DatasetAdmin(admin.ModelAdmin):
     list_display = ('id',)
     ordering = ('id', )
+    filter_horizontal = ('files',)
+
+
+class SimilarityAdmin(admin.ModelAdmin):
+    list_display = ('id', 'dataset_id')
+    ordering = ('id', 'dataset_id')
+    filter_horizontal = ('targets', 'results',)
 
 
 admin.site.register(models.File, FileAdmin)
 admin.site.register(models.Dataset, DatasetAdmin)
+admin.site.register(models.Similarity, SimilarityAdmin)
 
 admin.site.unregister(User)
 admin.site.unregister(Group)

@@ -12,5 +12,5 @@ export interface Similarity {
 export abstract class SimilarityData {
     abstract list(): Observable<Similarity[]>;
     abstract get(id: number): Observable<Similarity>;
-    abstract add(similarity: Similarity): Observable<Similarity>;
+    abstract add(similarity: any): Observable<Similarity>;
 }

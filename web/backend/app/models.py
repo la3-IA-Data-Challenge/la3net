@@ -26,4 +26,4 @@ class Similarity(models.Model):
     targets = models.ManyToManyField(
         File, verbose_name="Cibles", related_name="targets")
     results = models.ManyToManyField(
-        File, verbose_name="Résultat", related_name="results")
+        File, verbose_name="Résultat", related_name="results", blank=True)

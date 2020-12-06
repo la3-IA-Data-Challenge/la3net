@@ -1,0 +1,13 @@
+.file-item {
+	display: flex;
+	align-items: center;
+	padding: .5rem;
+    width: 100%;
+    border-bottom: 1px solid var(--surface-d);
+
+	img {
+		width: 75px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        margin-right: 1rem;
+	}
+}

@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NotFoundComponent } from '../not-found/not-found.component';
+import { SelectMethodComponent } from './select-method/select-method.component';
 import { SelectOptionComponent } from './select-option/select-option.component';
 import { SelectTargetsComponent } from './select-targets/select-targets.component';
 
 const routes: Routes = [
   { path: 'step1', component: SelectOptionComponent },
   { path: 'step2/:id', component: SelectTargetsComponent },
+  { path: 'step3/:id', component: SelectMethodComponent },
   { path: '', redirectTo: 'step1', pathMatch: 'full' },
   { path: '', redirectTo: 'step1', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
