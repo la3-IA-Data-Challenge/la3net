@@ -127,6 +127,8 @@ class Execute(APIView):
                     pass
                 elif (method == "method2"):
                     pass
+                elif (method == "method3"):
+                    pass
                 else:
                     return Response({"Error 400": "Bad request"}, status=status.HTTP_400_BAD_REQUEST)
 
